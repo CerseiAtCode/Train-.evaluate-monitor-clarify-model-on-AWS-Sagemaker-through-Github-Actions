@@ -69,10 +69,20 @@ prefix = "model-monitor-clarify-step-pipeline"
 
 #Define variables and parameters
 # role = sagemaker.get_execution_role()
+# BUCKET_NAME = os.environ['BUCKET_NAME']
+# PREFIX = os.environ['PREFIX']
+# REGION = os.environ['AWS_DEFAULT_REGION']
+# Replace with your IAM role arn that has enough access (e.g. SageMakerFullAccess)
+role = os.environ['IAM_ROLE_NAME']
+GITHUB_SHA = os.environ['GITHUB_SHA']
 default_bucket = "sagemaker-pipeline-githubactions"
 base_job_prefix = "train-monitor-clarify-pipeline"
 model_package_group_name = "model-monitor-clarify-group"
 pipeline_name = "model-monitor-clarify-pipeline-rad"
+print(region)
+print(role)
+print(bucket)
+print(prefix)
 
 
 #Define pipeline parameters
