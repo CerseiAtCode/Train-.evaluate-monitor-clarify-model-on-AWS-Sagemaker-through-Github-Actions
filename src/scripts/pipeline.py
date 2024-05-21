@@ -646,6 +646,21 @@ drift_check_baselines = DriftCheckBaselines(
     ),
 )
 
+
+#====================Register the model============================
+register_args = model.register(
+    content_types=["text/csv"],
+    response_types=["text/csv"],
+    inference_instances=["ml.t2.medium", "ml.m5.large"],
+    transform_instances=["ml.m5.large"],
+    model_package_group_name=model_package_group_name,
+    approval_status=model_approval_status,
+    model_metrics=model_metrics,
+    drift_check_baselines=drift_check_baselines,
+)
+
+step_register = ModelStep(name="RegisterAbaloneModel", step_args=register_args)
+
 #==================Condition step=============================
 # condition step for evaluating model quality and branching execution
 cond_lte = ConditionLessThanOrEqualTo(
