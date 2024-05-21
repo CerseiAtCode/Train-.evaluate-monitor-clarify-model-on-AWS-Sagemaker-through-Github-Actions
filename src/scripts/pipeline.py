@@ -68,7 +68,7 @@ pipeline_session = PipelineSession()
 prefix = "model-monitor-clarify-step-pipeline"
 
 #Define variables and parameters
-role = sagemaker.get_execution_role()
+# role = sagemaker.get_execution_role()
 default_bucket = "sagemaker-pipeline-githubactions"
 base_job_prefix = "train-monitor-clarify-pipeline"
 model_package_group_name = "model-monitor-clarify-group"
