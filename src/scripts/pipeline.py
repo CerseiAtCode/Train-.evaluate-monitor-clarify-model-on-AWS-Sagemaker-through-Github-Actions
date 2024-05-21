@@ -167,7 +167,7 @@ processor_args = sklearn_processor.run(
         ProcessingOutput(output_name="validation", source="/opt/ml/processing/validation"),
         ProcessingOutput(output_name="test", source="/opt/ml/processing/test"),
     ],
-    code="code/preprocess.py",
+    code="scripts/code/preprocess.py",
     arguments=["--input-data", input_data],
 )
 step_process = ProcessingStep(name="PreprocessAbaloneData", step_args=processor_args)
@@ -494,7 +494,7 @@ eval_args = script_eval.run(
     outputs=[
         ProcessingOutput(output_name="evaluation", source="/opt/ml/processing/evaluation"),
     ],
-    code="code/evaluate.py",
+    code="scripts/code/evaluate.py",
 )
 step_eval = ProcessingStep(
     name="EvaluateAbaloneModel",
