@@ -81,8 +81,8 @@ model_package_group_name = "model-monitor-clarify-group"
 pipeline_name = "model-monitor-clarify-pipeline-rad"
 print(region)
 print(role)
-print(bucket)
-print(prefix)
+print(default_bucket)
+print(base_job_prefix)
 
 
 #Define pipeline parameters
