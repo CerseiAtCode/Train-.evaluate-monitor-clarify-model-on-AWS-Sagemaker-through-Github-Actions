@@ -73,15 +73,15 @@ role = os.environ['IAM_ROLE_NAME']
 GITHUB_SHA = os.environ['GITHUB_SHA']
 default_bucket = os.environ['BUCKET_NAME']
 base_job_prefix = os.environ['PREFIX']
-model_package_group_name = os.environ['MODEL_PACKAGE_GROUP_NAME']
-pipeline_name = os.environ['PIPELINE_NAME']
+# model_package_group_name = os.environ['MODEL_PACKAGE_GROUP_NAME']
+# pipeline_name = os.environ['PIPELINE_NAME']
 
 # role = os.environ['IAM_ROLE_NAME']
 # GITHUB_SHA = os.environ['GITHUB_SHA']
 # default_bucket = "sagemaker-pipeline-githubactions"
 # base_job_prefix = "train-monitor-clarify-pipeline"
-# model_package_group_name = "model-monitor-clarify-group"
-# pipeline_name = "model-monitor-clarify-pipeline-rad"
+model_package_group_name = "model-monitor-clarify-group"
+pipeline_name = "model-monitor-clarify-pipeline-rad"
 print(region)
 print(role)
 print(default_bucket)
