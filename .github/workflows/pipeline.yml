@@ -9,7 +9,7 @@ jobs:
   
   submit_training_job:
     runs-on: ubuntu-latest
-    name: Deploy-TrainingPipeline
+    name: Deploy-MonitoringPipeline
     steps:
     - uses: actions/checkout@v3
     - name: Fire SageMaker
@@ -27,6 +27,6 @@ jobs:
       working-directory: ./src
       run: |
         pip install --no-cache-dir --upgrade awscli boto3 sagemaker joblib s3fs fsspec 
-        python scripts/pipeline.py 
+        python scripts/monitoring_pipeline.py 
 
  
